@@ -1,0 +1,699 @@
+logs/cifar100/10_10_sip/palora/Adam/0
+2026-04-26 20:23:37,184 [trainer.py] => config: configs/palora/c10_palora.json
+2026-04-26 20:23:37,184 [trainer.py] => device: [device(type='cuda', index=0)]
+2026-04-26 20:23:37,184 [trainer.py] => eval: False
+2026-04-26 20:23:37,184 [trainer.py] => p: 0.5
+2026-04-26 20:23:37,184 [trainer.py] => prefix: reproduce
+2026-04-26 20:23:37,184 [trainer.py] => dataset: cifar100
+2026-04-26 20:23:37,184 [trainer.py] => data_path: data/
+2026-04-26 20:23:37,184 [trainer.py] => memory_size: 0
+2026-04-26 20:23:37,184 [trainer.py] => memory_per_class: 0
+2026-04-26 20:23:37,184 [trainer.py] => fixed_memory: True
+2026-04-26 20:23:37,184 [trainer.py] => shuffle: False
+2026-04-26 20:23:37,184 [trainer.py] => seed: 0
+2026-04-26 20:23:37,184 [trainer.py] => init_cls: 10
+2026-04-26 20:23:37,184 [trainer.py] => increment: 10
+2026-04-26 20:23:37,184 [trainer.py] => total_sessions: 10
+2026-04-26 20:23:37,184 [trainer.py] => model_name: palora
+2026-04-26 20:23:37,184 [trainer.py] => net_type: sip
+2026-04-26 20:23:37,184 [trainer.py] => embd_dim: 768
+2026-04-26 20:23:37,184 [trainer.py] => num_heads: 12
+2026-04-26 20:23:37,184 [trainer.py] => EPSILON: 1e-08
+2026-04-26 20:23:37,184 [trainer.py] => init_epoch: 20
+2026-04-26 20:23:37,184 [trainer.py] => optim: Adam
+2026-04-26 20:23:37,184 [trainer.py] => init_lr: 0.0005
+2026-04-26 20:23:37,184 [trainer.py] => init_lr_decay: 0.1
+2026-04-26 20:23:37,184 [trainer.py] => init_weight_decay: 0.0
+2026-04-26 20:23:37,184 [trainer.py] => epochs: 20
+2026-04-26 20:23:37,184 [trainer.py] => fc_lrate: 0.002
+2026-04-26 20:23:37,184 [trainer.py] => lrate: 0.0005
+2026-04-26 20:23:37,184 [trainer.py] => lrate_decay: 0.1
+2026-04-26 20:23:37,185 [trainer.py] => batch_size: 128
+2026-04-26 20:23:37,185 [trainer.py] => weight_decay: 0.0
+2026-04-26 20:23:37,185 [trainer.py] => rank: 10
+2026-04-26 20:23:37,185 [trainer.py] => margin_inter: 2.0
+2026-04-26 20:23:37,185 [trainer.py] => lambada: 0.5
+2026-04-26 20:23:37,185 [trainer.py] => num_workers: 16
+Files already downloaded and verified
+Files already downloaded and verified
+2026-04-26 20:23:38,866 [data_manager.py] => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]
+2026-04-26 20:23:41,487 [trainer.py] => All params: 111194651
+2026-04-26 20:23:41,489 [trainer.py] => Trainable params: 111194651
+2026-04-26 20:23:41,489 [palora.py] => Learning on 0-10
+Parameters to be updated: {'image_encoder.blocks.7.attn.lora_A_k.0.weight', 'image_encoder.blocks.7.attn.lora_B_v.0.weight', 'image_encoder.blocks.10.attn.lora_B_k.0.weight', 'image_encoder.blocks.11.attn.lora_A_k.0.weight', 'image_encoder.blocks.11.attn.lora_B_k.0.weight', 'image_encoder.blocks.3.attn.lora_B_v.0.weight', 'image_encoder.blocks.5.attn.lora_B_v.0.weight', 'image_encoder.blocks.2.attn.lora_B_v.0.weight', 'image_encoder.blocks.10.attn.lora_B_v.0.weight', 'image_encoder.blocks.9.attn.lora_A_k.0.weight', 'image_encoder.blocks.3.attn.lora_B_k.0.weight', 'image_encoder.blocks.11.attn.lora_B_v.0.weight', 'image_encoder.blocks.4.attn.lora_A_k.0.weight', 'image_encoder.blocks.6.attn.lora_A_k.0.weight', 'image_encoder.blocks.8.attn.lora_A_v.0.weight', 'image_encoder.blocks.9.attn.lora_B_v.0.weight', 'image_encoder.blocks.5.attn.lora_A_k.0.weight', 'classifier_pool.0.bias', 'image_encoder.blocks.8.attn.lora_B_v.0.weight', 'image_encoder.blocks.1.attn.lora_A_v.0.weight', 'image_encoder.blocks.1.attn.lora_B_k.0.weight', 'image_encoder.blocks.6.attn.lora_A_v.0.weight', 'image_encoder.blocks.2.attn.lora_B_k.0.weight', 'classifier_pool.0.weight', 'image_encoder.blocks.2.attn.lora_A_v.0.weight', 'image_encoder.blocks.1.attn.lora_A_k.0.weight', 'image_encoder.blocks.6.attn.lora_B_k.0.weight', 'image_encoder.blocks.9.attn.lora_A_v.0.weight', 'image_encoder.blocks.0.attn.lora_A_v.0.weight', 'image_encoder.blocks.8.attn.lora_B_k.0.weight', 'image_encoder.blocks.11.attn.lora_A_v.0.weight', 'image_encoder.blocks.0.attn.lora_A_k.0.weight', 'image_encoder.blocks.5.attn.lora_A_v.0.weight', 'image_encoder.blocks.0.attn.lora_B_k.0.weight', 'image_encoder.blocks.4.attn.lora_B_k.0.weight', 'image_encoder.blocks.4.attn.lora_A_v.0.weight', 'image_encoder.blocks.8.attn.lora_A_k.0.weight', 'image_encoder.blocks.10.attn.lora_A_k.0.weight', 'image_encoder.blocks.5.attn.lora_B_k.0.weight', 'image_encoder.blocks.3.attn.lora_A_v.0.weight', 'image_encoder.blocks.7.attn.lora_A_v.0.weight', 'image_encoder.blocks.1.attn.lora_B_v.0.weight', 'image_encoder.blocks.0.attn.lora_B_v.0.weight', 'image_encoder.blocks.9.attn.lora_B_k.0.weight', 'image_encoder.blocks.3.attn.lora_A_k.0.weight', 'image_encoder.blocks.2.attn.lora_A_k.0.weight', 'image_encoder.blocks.6.attn.lora_B_v.0.weight', 'image_encoder.blocks.10.attn.lora_A_v.0.weight', 'image_encoder.blocks.7.attn.lora_B_k.0.weight', 'image_encoder.blocks.4.attn.lora_B_v.0.weight'}
+2026-04-26 20:32:52,649 [palora.py] => Task 0, Epoch 20/20 => Loss 0.445, Train_accy 96.76
+2026-04-26 20:33:12,554 [trainer.py] => Time:571.065370798111
+1000 1000
+2026-04-26 20:33:17,277 [trainer.py] => Time:4.722522020339966
+2026-04-26 20:33:17,277 [trainer.py] => ACC: {'total': 99.4, '00-09': 99.4, 'old': 0, 'new': 99.4}
+2026-04-26 20:33:17,277 [trainer.py] => ACC top1 curve: [99.4]
+Average Accuracy: 99.4
+2026-04-26 20:33:17,277 [trainer.py] => Average Accuracy: 99.4
+2026-04-26 20:33:17,280 [trainer.py] => All params: 111194651
+2026-04-26 20:33:17,282 [trainer.py] => Trainable params: 376330
+2026-04-26 20:33:17,282 [palora.py] => Learning on 10-20
+Parameters to be updated: {'image_encoder.blocks.3.attn.lora_B_k.1.weight', 'image_encoder.blocks.1.attn.lora_B_v.1.weight', 'image_encoder.blocks.6.attn.lora_B_k.1.weight', 'image_encoder.blocks.0.attn.lora_A_v.1.weight', 'image_encoder.blocks.11.attn.lora_B_v.1.weight', 'image_encoder.blocks.8.attn.lora_A_v.1.weight', 'image_encoder.blocks.9.attn.lora_B_v.1.weight', 'image_encoder.blocks.5.attn.lora_A_k.1.weight', 'image_encoder.blocks.1.attn.lora_A_v.1.weight', 'image_encoder.blocks.2.attn.lora_A_k.1.weight', 'image_encoder.blocks.2.attn.lora_A_v.1.weight', 'image_encoder.blocks.0.attn.lora_B_k.1.weight', 'image_encoder.blocks.6.attn.lora_B_v.1.weight', 'image_encoder.blocks.5.attn.lora_B_v.1.weight', 'image_encoder.blocks.11.attn.lora_A_k.1.weight', 'image_encoder.blocks.5.attn.lora_B_k.1.weight', 'image_encoder.blocks.7.attn.lora_B_v.1.weight', 'image_encoder.blocks.4.attn.lora_A_k.1.weight', 'image_encoder.blocks.10.attn.lora_A_v.1.weight', 'image_encoder.blocks.6.attn.lora_A_k.1.weight', 'image_encoder.blocks.8.attn.lora_B_v.1.weight', 'image_encoder.blocks.9.attn.lora_A_v.1.weight', 'image_encoder.blocks.8.attn.lora_B_k.1.weight', 'image_encoder.blocks.4.attn.lora_B_v.1.weight', 'image_encoder.blocks.9.attn.lora_A_k.1.weight', 'image_encoder.blocks.1.attn.lora_A_k.1.weight', 'image_encoder.blocks.5.attn.lora_A_v.1.weight', 'classifier_pool.1.weight', 'image_encoder.blocks.7.attn.lora_A_k.1.weight', 'image_encoder.blocks.3.attn.lora_A_k.1.weight', 'image_encoder.blocks.8.attn.lora_A_k.1.weight', 'image_encoder.blocks.2.attn.lora_B_k.1.weight', 'image_encoder.blocks.9.attn.lora_B_k.1.weight', 'image_encoder.blocks.11.attn.lora_A_v.1.weight', 'image_encoder.blocks.7.attn.lora_A_v.1.weight', 'image_encoder.blocks.3.attn.lora_B_v.1.weight', 'image_encoder.blocks.6.attn.lora_A_v.1.weight', 'image_encoder.blocks.4.attn.lora_A_v.1.weight', 'image_encoder.blocks.7.attn.lora_B_k.1.weight', 'image_encoder.blocks.10.attn.lora_B_k.1.weight', 'image_encoder.blocks.10.attn.lora_B_v.1.weight', 'image_encoder.blocks.2.attn.lora_B_v.1.weight', 'image_encoder.blocks.4.attn.lora_B_k.1.weight', 'image_encoder.blocks.1.attn.lora_B_k.1.weight', 'image_encoder.blocks.0.attn.lora_A_k.1.weight', 'classifier_pool.1.bias', 'image_encoder.blocks.11.attn.lora_B_k.1.weight', 'image_encoder.blocks.3.attn.lora_A_v.1.weight', 'image_encoder.blocks.10.attn.lora_A_k.1.weight', 'image_encoder.blocks.0.attn.lora_B_v.1.weight'}
+After trained on task 0 tensor(0.6764, device='cuda:0') tensor(0.2743, device='cuda:0')
+After trained on task 0 tensor(0.5335, device='cuda:0') tensor(0.3531, device='cuda:0')
+After trained on task 0 tensor(0.4280, device='cuda:0') tensor(0.4594, device='cuda:0')
+After trained on task 0 tensor(0.6134, device='cuda:0') tensor(0.4325, device='cuda:0')
+After trained on task 0 tensor(0.4213, device='cuda:0') tensor(0.4322, device='cuda:0')
+After trained on task 0 tensor(0.4540, device='cuda:0') tensor(0.4551, device='cuda:0')
+After trained on task 0 tensor(0.4382, device='cuda:0') tensor(0.5399, device='cuda:0')
+After trained on task 0 tensor(0.4416, device='cuda:0') tensor(0.4961, device='cuda:0')
+After trained on task 0 tensor(0.4780, device='cuda:0') tensor(0.4782, device='cuda:0')
+After trained on task 0 tensor(0.6837, device='cuda:0') tensor(0.4741, device='cuda:0')
+After trained on task 0 tensor(0.8196, device='cuda:0') tensor(0.4869, device='cuda:0')
+After trained on task 0 tensor(1.2699, device='cuda:0') tensor(0.7426, device='cuda:0')
+reserving basis 9/768; cond: 13399387799552.0, ratio:0.9924822449684143
+reserving basis 9/768; cond: 13399387799552.0, ratio:0.9924822449684143
+reserving basis 10/768; cond: 1969243684864.0, ratio:0.9999992251396179
+reserving basis 10/768; cond: 1969243684864.0, ratio:0.9999992251396179
+reserving basis 10/768; cond: 3463993622528.0, ratio:0.9999991655349731
+reserving basis 10/768; cond: 3463993622528.0, ratio:0.9999991655349731
+reserving basis 10/768; cond: 1480351023104.0, ratio:0.9999991059303284
+reserving basis 10/768; cond: 1480351023104.0, ratio:0.9999991059303284
+reserving basis 10/768; cond: 2429427908608.0, ratio:0.9999991655349731
+reserving basis 10/768; cond: 2429427908608.0, ratio:0.9999991655349731
+reserving basis 10/768; cond: 6278435831808.0, ratio:0.9999991655349731
+reserving basis 10/768; cond: 6278435831808.0, ratio:0.9999991655349731
+reserving basis 10/768; cond: 455155468206080.0, ratio:0.9999991059303284
+reserving basis 10/768; cond: 455155468206080.0, ratio:0.9999991059303284
+reserving basis 10/768; cond: 1432410783744.0, ratio:0.9999990463256836
+reserving basis 10/768; cond: 1432410783744.0, ratio:0.9999990463256836
+reserving basis 10/768; cond: 1054160781312.0, ratio:0.9999992251396179
+reserving basis 10/768; cond: 1054160781312.0, ratio:0.9999992251396179
+reserving basis 10/768; cond: 9496815468544.0, ratio:0.9999992251396179
+reserving basis 10/768; cond: 9496815468544.0, ratio:0.9999992251396179
+reserving basis 10/768; cond: 1559953670144.0, ratio:0.9999992251396179
+reserving basis 10/768; cond: 1559953670144.0, ratio:0.9999992251396179
+reserving basis 10/768; cond: 910644674560.0, ratio:0.9999991655349731
+reserving basis 10/768; cond: 910644674560.0, ratio:0.9999991655349731
+reserving basis 10/768; cond: 3560119992320.0, ratio:0.9999991059303284
+reserving basis 10/768; cond: 3560119992320.0, ratio:0.9999991059303284
+reserving basis 10/768; cond: 22316123684864.0, ratio:0.9999991655349731
+reserving basis 10/768; cond: 22316123684864.0, ratio:0.9999991655349731
+reserving basis 10/768; cond: 933254856704.0, ratio:0.9999991655349731
+reserving basis 10/768; cond: 933254856704.0, ratio:0.9999991655349731
+reserving basis 10/768; cond: 10545217404928.0, ratio:0.9999990463256836
+reserving basis 10/768; cond: 10545217404928.0, ratio:0.9999990463256836
+reserving basis 10/768; cond: 7547454488576.0, ratio:0.9999991059303284
+reserving basis 10/768; cond: 7547454488576.0, ratio:0.9999991059303284
+reserving basis 10/768; cond: 1860022697984.0, ratio:0.9999990463256836
+reserving basis 10/768; cond: 1860022697984.0, ratio:0.9999990463256836
+reserving basis 10/768; cond: 760902909952.0, ratio:0.9999992251396179
+reserving basis 10/768; cond: 760902909952.0, ratio:0.9999992251396179
+reserving basis 10/768; cond: 5786399932416.0, ratio:0.9999990463256836
+reserving basis 10/768; cond: 5786399932416.0, ratio:0.9999990463256836
+reserving basis 10/768; cond: 7863878025216.0, ratio:0.9999992251396179
+reserving basis 10/768; cond: 7863878025216.0, ratio:0.9999992251396179
+reserving basis 10/768; cond: 4551914029056.0, ratio:0.9999992251396179
+reserving basis 10/768; cond: 4551914029056.0, ratio:0.9999992251396179
+reserving basis 9/768; cond: 3180622512128.0, ratio:0.9913911819458008
+reserving basis 9/768; cond: 3180622512128.0, ratio:0.9913911819458008
+reserving basis 10/768; cond: 1346853666816.0, ratio:0.9999992847442627
+reserving basis 10/768; cond: 1346853666816.0, ratio:0.9999992847442627
+2026-04-26 20:42:21,111 [palora.py] => Task 1, Epoch 20/20 => Loss 0.489, Train_accy 95.46
+2026-04-26 20:42:40,669 [trainer.py] => Time:563.3869352340698
+2000 2000
+2026-04-26 20:42:47,079 [trainer.py] => Time:6.410100936889648
+2026-04-26 20:42:47,079 [trainer.py] => ACC: {'total': 97.4, '00-09': 96.8, '10-19': 98.0, 'old': 96.8, 'new': 98.0}
+2026-04-26 20:42:47,079 [trainer.py] => ACC top1 curve: [99.4, 97.4]
+Average Accuracy: 98.4
+2026-04-26 20:42:47,079 [trainer.py] => Average Accuracy: 98.4
+2026-04-26 20:42:47,082 [trainer.py] => All params: 111194651
+2026-04-26 20:42:47,084 [trainer.py] => Trainable params: 376330
+2026-04-26 20:42:47,084 [palora.py] => Learning on 20-30
+Parameters to be updated: {'image_encoder.blocks.4.attn.lora_B_k.2.weight', 'image_encoder.blocks.11.attn.lora_B_k.2.weight', 'image_encoder.blocks.3.attn.lora_B_v.2.weight', 'image_encoder.blocks.0.attn.lora_B_k.2.weight', 'image_encoder.blocks.0.attn.lora_A_v.2.weight', 'image_encoder.blocks.6.attn.lora_A_v.2.weight', 'image_encoder.blocks.3.attn.lora_B_k.2.weight', 'image_encoder.blocks.9.attn.lora_B_k.2.weight', 'image_encoder.blocks.10.attn.lora_A_k.2.weight', 'image_encoder.blocks.1.attn.lora_B_k.2.weight', 'image_encoder.blocks.6.attn.lora_B_v.2.weight', 'classifier_pool.2.weight', 'image_encoder.blocks.10.attn.lora_B_v.2.weight', 'image_encoder.blocks.5.attn.lora_A_k.2.weight', 'image_encoder.blocks.9.attn.lora_A_v.2.weight', 'image_encoder.blocks.2.attn.lora_B_k.2.weight', 'image_encoder.blocks.3.attn.lora_A_v.2.weight', 'image_encoder.blocks.0.attn.lora_B_v.2.weight', 'image_encoder.blocks.4.attn.lora_A_v.2.weight', 'image_encoder.blocks.7.attn.lora_A_v.2.weight', 'image_encoder.blocks.8.attn.lora_A_v.2.weight', 'image_encoder.blocks.3.attn.lora_A_k.2.weight', 'image_encoder.blocks.4.attn.lora_A_k.2.weight', 'image_encoder.blocks.11.attn.lora_A_v.2.weight', 'image_encoder.blocks.1.attn.lora_B_v.2.weight', 'image_encoder.blocks.4.attn.lora_B_v.2.weight', 'image_encoder.blocks.11.attn.lora_B_v.2.weight', 'image_encoder.blocks.8.attn.lora_B_v.2.weight', 'image_encoder.blocks.6.attn.lora_B_k.2.weight', 'image_encoder.blocks.1.attn.lora_A_k.2.weight', 'image_encoder.blocks.7.attn.lora_B_v.2.weight', 'image_encoder.blocks.10.attn.lora_B_k.2.weight', 'image_encoder.blocks.7.attn.lora_A_k.2.weight', 'image_encoder.blocks.11.attn.lora_A_k.2.weight', 'image_encoder.blocks.5.attn.lora_B_v.2.weight', 'classifier_pool.2.bias', 'image_encoder.blocks.1.attn.lora_A_v.2.weight', 'image_encoder.blocks.7.attn.lora_B_k.2.weight', 'image_encoder.blocks.9.attn.lora_B_v.2.weight', 'image_encoder.blocks.10.attn.lora_A_v.2.weight', 'image_encoder.blocks.0.attn.lora_A_k.2.weight', 'image_encoder.blocks.5.attn.lora_B_k.2.weight', 'image_encoder.blocks.5.attn.lora_A_v.2.weight', 'image_encoder.blocks.9.attn.lora_A_k.2.weight', 'image_encoder.blocks.2.attn.lora_A_k.2.weight', 'image_encoder.blocks.6.attn.lora_A_k.2.weight', 'image_encoder.blocks.8.attn.lora_A_k.2.weight', 'image_encoder.blocks.8.attn.lora_B_k.2.weight', 'image_encoder.blocks.2.attn.lora_A_v.2.weight', 'image_encoder.blocks.2.attn.lora_B_v.2.weight'}
+After trained on task 1 tensor(0.2659, device='cuda:0') tensor(0.1692, device='cuda:0')
+After trained on task 1 tensor(0.2244, device='cuda:0') tensor(0.2257, device='cuda:0')
+After trained on task 1 tensor(0.2772, device='cuda:0') tensor(0.2592, device='cuda:0')
+After trained on task 1 tensor(0.3378, device='cuda:0') tensor(0.1955, device='cuda:0')
+After trained on task 1 tensor(0.2476, device='cuda:0') tensor(0.2239, device='cuda:0')
+After trained on task 1 tensor(0.3088, device='cuda:0') tensor(0.2794, device='cuda:0')
+After trained on task 1 tensor(0.3172, device='cuda:0') tensor(0.4007, device='cuda:0')
+After trained on task 1 tensor(0.2660, device='cuda:0') tensor(0.3427, device='cuda:0')
+After trained on task 1 tensor(0.3252, device='cuda:0') tensor(0.3174, device='cuda:0')
+After trained on task 1 tensor(0.3953, device='cuda:0') tensor(0.3224, device='cuda:0')
+After trained on task 1 tensor(0.4754, device='cuda:0') tensor(0.3150, device='cuda:0')
+After trained on task 1 tensor(0.6613, device='cuda:0') tensor(0.4135, device='cuda:0')
+reserving basis 18/768; cond: 935612055552.0, ratio:0.9942229986190796
+reserving basis 18/768; cond: 935612055552.0, ratio:0.9942229986190796
+reserving basis 20/768; cond: 1683382206464.0, ratio:0.9999988675117493
+reserving basis 20/768; cond: 1683382206464.0, ratio:0.9999988675117493
+reserving basis 19/768; cond: 2068534394880.0, ratio:0.9908106327056885
+reserving basis 19/768; cond: 2068534394880.0, ratio:0.9908106327056885
+reserving basis 19/768; cond: 711837417472.0, ratio:0.9903911352157593
+reserving basis 19/768; cond: 711837417472.0, ratio:0.9903911352157593
+reserving basis 19/768; cond: 485700304896.0, ratio:0.9902594685554504
+reserving basis 19/768; cond: 485700304896.0, ratio:0.9902594685554504
+reserving basis 19/768; cond: 3338248126464.0, ratio:0.9912999272346497
+reserving basis 19/768; cond: 3338248126464.0, ratio:0.9912999272346497
+reserving basis 19/768; cond: 403931037696.0, ratio:0.9904857873916626
+reserving basis 19/768; cond: 403931037696.0, ratio:0.9904857873916626
+reserving basis 19/768; cond: 2255338864640.0, ratio:0.9912328124046326
+reserving basis 19/768; cond: 2255338864640.0, ratio:0.9912328124046326
+reserving basis 20/768; cond: 461964771328.0, ratio:0.9999988079071045
+reserving basis 20/768; cond: 461964771328.0, ratio:0.9999988079071045
+reserving basis 19/768; cond: 396998705152.0, ratio:0.991821825504303
+reserving basis 19/768; cond: 396998705152.0, ratio:0.991821825504303
+reserving basis 20/768; cond: 757510176768.0, ratio:0.9999988675117493
+reserving basis 20/768; cond: 757510176768.0, ratio:0.9999988675117493
+reserving basis 19/768; cond: 4813196099584.0, ratio:0.9924414753913879
+reserving basis 19/768; cond: 4813196099584.0, ratio:0.9924414753913879
+reserving basis 20/768; cond: 7365019041792.0, ratio:0.9999988079071045
+reserving basis 20/768; cond: 7365019041792.0, ratio:0.9999988079071045
+reserving basis 19/768; cond: 3637970468864.0, ratio:0.9932255148887634
+reserving basis 19/768; cond: 3637970468864.0, ratio:0.9932255148887634
+reserving basis 20/768; cond: 670426529792.0, ratio:0.9999986886978149
+reserving basis 20/768; cond: 670426529792.0, ratio:0.9999986886978149
+reserving basis 19/768; cond: 409573326848.0, ratio:0.9938645958900452
+reserving basis 19/768; cond: 409573326848.0, ratio:0.9938645958900452
+reserving basis 20/768; cond: 1710657896448.0, ratio:0.9999987483024597
+reserving basis 20/768; cond: 1710657896448.0, ratio:0.9999987483024597
+reserving basis 19/768; cond: 875228692480.0, ratio:0.9902927279472351
+reserving basis 19/768; cond: 875228692480.0, ratio:0.9902927279472351
+reserving basis 19/768; cond: 2901761589248.0, ratio:0.9914485216140747
+reserving basis 19/768; cond: 2901761589248.0, ratio:0.9914485216140747
+reserving basis 19/768; cond: 892075245568.0, ratio:0.9910162091255188
+reserving basis 19/768; cond: 892075245568.0, ratio:0.9910162091255188
+reserving basis 19/768; cond: 1621266530304.0, ratio:0.9913938045501709
+reserving basis 19/768; cond: 1621266530304.0, ratio:0.9913938045501709
+reserving basis 19/768; cond: 2525944348672.0, ratio:0.9904448390007019
+reserving basis 19/768; cond: 2525944348672.0, ratio:0.9904448390007019
+reserving basis 18/768; cond: 2748764127232.0, ratio:0.9946293234825134
+reserving basis 18/768; cond: 2748764127232.0, ratio:0.9946293234825134
+reserving basis 19/768; cond: 947987480576.0, ratio:0.9930410981178284
+reserving basis 19/768; cond: 947987480576.0, ratio:0.9930410981178284
+2026-04-26 20:51:54,718 [palora.py] => Task 2, Epoch 20/20 => Loss 0.477, Train_accy 96.14
+2026-04-26 20:52:14,238 [trainer.py] => Time:567.153974533081
+3000 3000
+2026-04-26 20:52:22,766 [trainer.py] => Time:8.52734375
+2026-04-26 20:52:22,766 [trainer.py] => ACC: {'total': 95.83, '00-09': 95.8, '10-19': 95.8, '20-29': 95.9, 'old': 95.8, 'new': 95.9}
+2026-04-26 20:52:22,766 [trainer.py] => ACC top1 curve: [99.4, 97.4, 95.83]
+Average Accuracy: 97.54333333333334
+2026-04-26 20:52:22,766 [trainer.py] => Average Accuracy: 97.54333333333334
+2026-04-26 20:52:22,768 [trainer.py] => All params: 111194651
+2026-04-26 20:52:22,770 [trainer.py] => Trainable params: 376330
+2026-04-26 20:52:22,770 [palora.py] => Learning on 30-40
+Parameters to be updated: {'image_encoder.blocks.6.attn.lora_B_k.3.weight', 'image_encoder.blocks.9.attn.lora_B_k.3.weight', 'image_encoder.blocks.1.attn.lora_B_k.3.weight', 'image_encoder.blocks.2.attn.lora_B_v.3.weight', 'image_encoder.blocks.5.attn.lora_B_v.3.weight', 'image_encoder.blocks.9.attn.lora_A_v.3.weight', 'image_encoder.blocks.0.attn.lora_A_k.3.weight', 'image_encoder.blocks.0.attn.lora_B_k.3.weight', 'image_encoder.blocks.4.attn.lora_B_v.3.weight', 'image_encoder.blocks.9.attn.lora_B_v.3.weight', 'image_encoder.blocks.5.attn.lora_A_k.3.weight', 'image_encoder.blocks.2.attn.lora_A_v.3.weight', 'classifier_pool.3.bias', 'image_encoder.blocks.11.attn.lora_A_k.3.weight', 'image_encoder.blocks.2.attn.lora_B_k.3.weight', 'image_encoder.blocks.7.attn.lora_B_v.3.weight', 'image_encoder.blocks.10.attn.lora_A_v.3.weight', 'image_encoder.blocks.10.attn.lora_B_k.3.weight', 'image_encoder.blocks.8.attn.lora_B_v.3.weight', 'image_encoder.blocks.11.attn.lora_B_v.3.weight', 'image_encoder.blocks.1.attn.lora_B_v.3.weight', 'classifier_pool.3.weight', 'image_encoder.blocks.6.attn.lora_A_k.3.weight', 'image_encoder.blocks.1.attn.lora_A_k.3.weight', 'image_encoder.blocks.10.attn.lora_B_v.3.weight', 'image_encoder.blocks.10.attn.lora_A_k.3.weight', 'image_encoder.blocks.5.attn.lora_A_v.3.weight', 'image_encoder.blocks.0.attn.lora_B_v.3.weight', 'image_encoder.blocks.8.attn.lora_A_k.3.weight', 'image_encoder.blocks.3.attn.lora_B_v.3.weight', 'image_encoder.blocks.4.attn.lora_A_v.3.weight', 'image_encoder.blocks.5.attn.lora_B_k.3.weight', 'image_encoder.blocks.6.attn.lora_B_v.3.weight', 'image_encoder.blocks.3.attn.lora_B_k.3.weight', 'image_encoder.blocks.7.attn.lora_B_k.3.weight', 'image_encoder.blocks.3.attn.lora_A_v.3.weight', 'image_encoder.blocks.4.attn.lora_B_k.3.weight', 'image_encoder.blocks.11.attn.lora_B_k.3.weight', 'image_encoder.blocks.7.attn.lora_A_k.3.weight', 'image_encoder.blocks.8.attn.lora_B_k.3.weight', 'image_encoder.blocks.6.attn.lora_A_v.3.weight', 'image_encoder.blocks.11.attn.lora_A_v.3.weight', 'image_encoder.blocks.1.attn.lora_A_v.3.weight', 'image_encoder.blocks.3.attn.lora_A_k.3.weight', 'image_encoder.blocks.9.attn.lora_A_k.3.weight', 'image_encoder.blocks.0.attn.lora_A_v.3.weight', 'image_encoder.blocks.2.attn.lora_A_k.3.weight', 'image_encoder.blocks.7.attn.lora_A_v.3.weight', 'image_encoder.blocks.8.attn.lora_A_v.3.weight', 'image_encoder.blocks.4.attn.lora_A_k.3.weight'}
+After trained on task 2 tensor(0.2507, device='cuda:0') tensor(0.1336, device='cuda:0')
+After trained on task 2 tensor(0.1727, device='cuda:0') tensor(0.2416, device='cuda:0')
+After trained on task 2 tensor(0.1919, device='cuda:0') tensor(0.1988, device='cuda:0')
+After trained on task 2 tensor(0.2300, device='cuda:0') tensor(0.1588, device='cuda:0')
+After trained on task 2 tensor(0.2493, device='cuda:0') tensor(0.1656, device='cuda:0')
+After trained on task 2 tensor(0.1793, device='cuda:0') tensor(0.2366, device='cuda:0')
+After trained on task 2 tensor(0.2372, device='cuda:0') tensor(0.2721, device='cuda:0')
+After trained on task 2 tensor(0.2366, device='cuda:0') tensor(0.3285, device='cuda:0')
+After trained on task 2 tensor(0.2814, device='cuda:0') tensor(0.2567, device='cuda:0')
+After trained on task 2 tensor(0.3315, device='cuda:0') tensor(0.2440, device='cuda:0')
+After trained on task 2 tensor(0.2802, device='cuda:0') tensor(0.2338, device='cuda:0')
+After trained on task 2 tensor(0.4924, device='cuda:0') tensor(0.3520, device='cuda:0')
+reserving basis 25/768; cond: 1845915156480.0, ratio:0.9902476072311401
+reserving basis 25/768; cond: 1845915156480.0, ratio:0.9902476072311401
+reserving basis 29/768; cond: 449625784320.0, ratio:0.9946764707565308
+reserving basis 29/768; cond: 449625784320.0, ratio:0.9946764707565308
+reserving basis 28/768; cond: 585944793088.0, ratio:0.9956010580062866
+reserving basis 28/768; cond: 585944793088.0, ratio:0.9956010580062866
+reserving basis 27/768; cond: 2106095697920.0, ratio:0.9902485609054565
+reserving basis 27/768; cond: 2106095697920.0, ratio:0.9902485609054565
+reserving basis 28/768; cond: 5066651074560.0, ratio:0.993893027305603
+reserving basis 28/768; cond: 5066651074560.0, ratio:0.993893027305603
+reserving basis 28/768; cond: 3269351702528.0, ratio:0.9938285946846008
+reserving basis 28/768; cond: 3269351702528.0, ratio:0.9938285946846008
+reserving basis 28/768; cond: 1129711009792.0, ratio:0.9943625926971436
+reserving basis 28/768; cond: 1129711009792.0, ratio:0.9943625926971436
+reserving basis 28/768; cond: 1389691797504.0, ratio:0.9937821626663208
+reserving basis 28/768; cond: 1389691797504.0, ratio:0.9937821626663208
+reserving basis 29/768; cond: 386036498432.0, ratio:0.9944958090782166
+reserving basis 29/768; cond: 386036498432.0, ratio:0.9944958090782166
+reserving basis 28/768; cond: 439477207040.0, ratio:0.995166540145874
+reserving basis 28/768; cond: 439477207040.0, ratio:0.995166540145874
+reserving basis 29/768; cond: 1042562547712.0, ratio:0.9923248291015625
+reserving basis 29/768; cond: 1042562547712.0, ratio:0.9923248291015625
+reserving basis 27/768; cond: 2499328344064.0, ratio:0.9913957118988037
+reserving basis 27/768; cond: 2499328344064.0, ratio:0.9913957118988037
+reserving basis 29/768; cond: 127895379968.0, ratio:0.9948413968086243
+reserving basis 29/768; cond: 127895379968.0, ratio:0.9948413968086243
+reserving basis 27/768; cond: 639394250752.0, ratio:0.9915861487388611
+reserving basis 27/768; cond: 639394250752.0, ratio:0.9915861487388611
+reserving basis 29/768; cond: 309551267840.0, ratio:0.9924055337905884
+reserving basis 29/768; cond: 309551267840.0, ratio:0.9924055337905884
+reserving basis 27/768; cond: 530270093312.0, ratio:0.9923354387283325
+reserving basis 27/768; cond: 530270093312.0, ratio:0.9923354387283325
+reserving basis 29/768; cond: 3184191602688.0, ratio:0.9941619634628296
+reserving basis 29/768; cond: 3184191602688.0, ratio:0.9941619634628296
+reserving basis 28/768; cond: 1190645727232.0, ratio:0.9950530529022217
+reserving basis 28/768; cond: 1190645727232.0, ratio:0.9950530529022217
+reserving basis 28/768; cond: 435575652352.0, ratio:0.9952043294906616
+reserving basis 28/768; cond: 435575652352.0, ratio:0.9952043294906616
+reserving basis 28/768; cond: 573038592000.0, ratio:0.9933096766471863
+reserving basis 28/768; cond: 573038592000.0, ratio:0.9933096766471863
+reserving basis 28/768; cond: 344183930880.0, ratio:0.9944723844528198
+reserving basis 28/768; cond: 344183930880.0, ratio:0.9944723844528198
+reserving basis 28/768; cond: 496635707392.0, ratio:0.9949899315834045
+reserving basis 28/768; cond: 496635707392.0, ratio:0.9949899315834045
+reserving basis 25/768; cond: 6051184246784.0, ratio:0.9900839924812317
+reserving basis 25/768; cond: 6051184246784.0, ratio:0.9900839924812317
+reserving basis 27/768; cond: 1376632438784.0, ratio:0.9919760227203369
+reserving basis 27/768; cond: 1376632438784.0, ratio:0.9919760227203369
+2026-04-26 21:01:30,678 [palora.py] => Task 3, Epoch 20/20 => Loss 0.470, Train_accy 96.16
+2026-04-26 21:01:50,629 [trainer.py] => Time:567.8588864803314
+4000 4000
+2026-04-26 21:02:01,121 [trainer.py] => Time:10.49099850654602
+2026-04-26 21:02:01,121 [trainer.py] => ACC: {'total': 94.88, '00-09': 95.3, '10-19': 93.3, '20-29': 95.6, '30-39': 95.3, 'old': 94.73, 'new': 95.3}
+2026-04-26 21:02:01,121 [trainer.py] => ACC top1 curve: [99.4, 97.4, 95.83, 94.88]
+Average Accuracy: 96.8775
+2026-04-26 21:02:01,121 [trainer.py] => Average Accuracy: 96.8775
+2026-04-26 21:02:01,124 [trainer.py] => All params: 111194651
+2026-04-26 21:02:01,125 [trainer.py] => Trainable params: 376330
+2026-04-26 21:02:01,126 [palora.py] => Learning on 40-50
+Parameters to be updated: {'image_encoder.blocks.0.attn.lora_A_v.4.weight', 'image_encoder.blocks.0.attn.lora_A_k.4.weight', 'image_encoder.blocks.8.attn.lora_A_v.4.weight', 'image_encoder.blocks.10.attn.lora_B_k.4.weight', 'image_encoder.blocks.4.attn.lora_B_v.4.weight', 'image_encoder.blocks.6.attn.lora_B_k.4.weight', 'image_encoder.blocks.3.attn.lora_B_k.4.weight', 'image_encoder.blocks.2.attn.lora_B_k.4.weight', 'image_encoder.blocks.9.attn.lora_B_k.4.weight', 'classifier_pool.4.bias', 'image_encoder.blocks.11.attn.lora_B_k.4.weight', 'image_encoder.blocks.3.attn.lora_A_v.4.weight', 'image_encoder.blocks.2.attn.lora_B_v.4.weight', 'image_encoder.blocks.1.attn.lora_B_k.4.weight', 'image_encoder.blocks.0.attn.lora_B_k.4.weight', 'image_encoder.blocks.1.attn.lora_A_v.4.weight', 'image_encoder.blocks.7.attn.lora_A_v.4.weight', 'image_encoder.blocks.5.attn.lora_B_v.4.weight', 'image_encoder.blocks.11.attn.lora_A_v.4.weight', 'image_encoder.blocks.8.attn.lora_B_v.4.weight', 'image_encoder.blocks.5.attn.lora_B_k.4.weight', 'image_encoder.blocks.4.attn.lora_A_k.4.weight', 'image_encoder.blocks.0.attn.lora_B_v.4.weight', 'image_encoder.blocks.9.attn.lora_A_v.4.weight', 'image_encoder.blocks.1.attn.lora_B_v.4.weight', 'image_encoder.blocks.10.attn.lora_A_v.4.weight', 'image_encoder.blocks.10.attn.lora_B_v.4.weight', 'image_encoder.blocks.3.attn.lora_B_v.4.weight', 'image_encoder.blocks.7.attn.lora_B_v.4.weight', 'image_encoder.blocks.1.attn.lora_A_k.4.weight', 'image_encoder.blocks.6.attn.lora_A_v.4.weight', 'image_encoder.blocks.4.attn.lora_A_v.4.weight', 'image_encoder.blocks.5.attn.lora_A_v.4.weight', 'image_encoder.blocks.7.attn.lora_B_k.4.weight', 'image_encoder.blocks.11.attn.lora_A_k.4.weight', 'classifier_pool.4.weight', 'image_encoder.blocks.9.attn.lora_B_v.4.weight', 'image_encoder.blocks.8.attn.lora_A_k.4.weight', 'image_encoder.blocks.10.attn.lora_A_k.4.weight', 'image_encoder.blocks.2.attn.lora_A_k.4.weight', 'image_encoder.blocks.6.attn.lora_B_v.4.weight', 'image_encoder.blocks.6.attn.lora_A_k.4.weight', 'image_encoder.blocks.2.attn.lora_A_v.4.weight', 'image_encoder.blocks.7.attn.lora_A_k.4.weight', 'image_encoder.blocks.9.attn.lora_A_k.4.weight', 'image_encoder.blocks.5.attn.lora_A_k.4.weight', 'image_encoder.blocks.8.attn.lora_B_k.4.weight', 'image_encoder.blocks.11.attn.lora_B_v.4.weight', 'image_encoder.blocks.4.attn.lora_B_k.4.weight', 'image_encoder.blocks.3.attn.lora_A_k.4.weight'}
+After trained on task 3 tensor(0.1466, device='cuda:0') tensor(0.1114, device='cuda:0')
+After trained on task 3 tensor(0.1200, device='cuda:0') tensor(0.1291, device='cuda:0')
+After trained on task 3 tensor(0.1715, device='cuda:0') tensor(0.1408, device='cuda:0')
+After trained on task 3 tensor(0.1284, device='cuda:0') tensor(0.1301, device='cuda:0')
+After trained on task 3 tensor(0.1278, device='cuda:0') tensor(0.1670, device='cuda:0')
+After trained on task 3 tensor(0.1738, device='cuda:0') tensor(0.2190, device='cuda:0')
+After trained on task 3 tensor(0.2021, device='cuda:0') tensor(0.2648, device='cuda:0')
+After trained on task 3 tensor(0.1720, device='cuda:0') tensor(0.2725, device='cuda:0')
+After trained on task 3 tensor(0.2287, device='cuda:0') tensor(0.2450, device='cuda:0')
+After trained on task 3 tensor(0.2364, device='cuda:0') tensor(0.2126, device='cuda:0')
+After trained on task 3 tensor(0.2939, device='cuda:0') tensor(0.2266, device='cuda:0')
+After trained on task 3 tensor(0.5071, device='cuda:0') tensor(0.3818, device='cuda:0')
+reserving basis 32/768; cond: 221126844219392.0, ratio:0.9926820993423462
+reserving basis 32/768; cond: 221126844219392.0, ratio:0.9926820993423462
+reserving basis 38/768; cond: 115724517376.0, ratio:0.9952051043510437
+reserving basis 38/768; cond: 115724517376.0, ratio:0.9952051043510437
+reserving basis 36/768; cond: 316158279680.0, ratio:0.9932126998901367
+reserving basis 36/768; cond: 316158279680.0, ratio:0.9932126998901367
+reserving basis 35/768; cond: 68708556800.0, ratio:0.9923516511917114
+reserving basis 35/768; cond: 68708556800.0, ratio:0.9923516511917114
+reserving basis 36/768; cond: 1170096521216.0, ratio:0.9916476607322693
+reserving basis 36/768; cond: 1170096521216.0, ratio:0.9916476607322693
+reserving basis 36/768; cond: 6344545927168.0, ratio:0.9904937744140625
+reserving basis 36/768; cond: 6344545927168.0, ratio:0.9904937744140625
+reserving basis 37/768; cond: 711554760704.0, ratio:0.9950392842292786
+reserving basis 37/768; cond: 711554760704.0, ratio:0.9950392842292786
+reserving basis 36/768; cond: 331702599680.0, ratio:0.9907802939414978
+reserving basis 36/768; cond: 331702599680.0, ratio:0.9907802939414978
+reserving basis 38/768; cond: 209412046848.0, ratio:0.994413435459137
+reserving basis 38/768; cond: 209412046848.0, ratio:0.994413435459137
+reserving basis 36/768; cond: 6095346073600.0, ratio:0.9931087493896484
+reserving basis 36/768; cond: 6095346073600.0, ratio:0.9931087493896484
+reserving basis 38/768; cond: 74987044864.0, ratio:0.994695246219635
+reserving basis 38/768; cond: 74987044864.0, ratio:0.994695246219635
+reserving basis 35/768; cond: 201732734976.0, ratio:0.9933648109436035
+reserving basis 35/768; cond: 201732734976.0, ratio:0.9933648109436035
+reserving basis 37/768; cond: 739673178112.0, ratio:0.9911609888076782
+reserving basis 37/768; cond: 739673178112.0, ratio:0.9911609888076782
+reserving basis 34/768; cond: 771741974528.0, ratio:0.990517258644104
+reserving basis 34/768; cond: 771741974528.0, ratio:0.990517258644104
+reserving basis 38/768; cond: 156774055936.0, ratio:0.9947121739387512
+reserving basis 38/768; cond: 156774055936.0, ratio:0.9947121739387512
+reserving basis 35/768; cond: 236262408192.0, ratio:0.9939491152763367
+reserving basis 35/768; cond: 236262408192.0, ratio:0.9939491152763367
+reserving basis 37/768; cond: 129716445184.0, ratio:0.9908561706542969
+reserving basis 37/768; cond: 129716445184.0, ratio:0.9908561706542969
+reserving basis 36/768; cond: 195640344576.0, ratio:0.9925044178962708
+reserving basis 36/768; cond: 195640344576.0, ratio:0.9925044178962708
+reserving basis 36/768; cond: 881546166272.0, ratio:0.991649329662323
+reserving basis 36/768; cond: 881546166272.0, ratio:0.991649329662323
+reserving basis 36/768; cond: 511587811328.0, ratio:0.9910134673118591
+reserving basis 36/768; cond: 511587811328.0, ratio:0.9910134673118591
+reserving basis 36/768; cond: 715806277632.0, ratio:0.9935725331306458
+reserving basis 36/768; cond: 715806277632.0, ratio:0.9935725331306458
+reserving basis 36/768; cond: 309783691264.0, ratio:0.9928469061851501
+reserving basis 36/768; cond: 309783691264.0, ratio:0.9928469061851501
+reserving basis 32/768; cond: 2517745008640.0, ratio:0.9926593899726868
+reserving basis 32/768; cond: 2517745008640.0, ratio:0.9926593899726868
+reserving basis 34/768; cond: 5829333876736.0, ratio:0.9904789924621582
+reserving basis 34/768; cond: 5829333876736.0, ratio:0.9904789924621582
+2026-04-26 21:11:05,952 [palora.py] => Task 4, Epoch 20/20 => Loss 0.464, Train_accy 96.28
+2026-04-26 21:11:25,537 [trainer.py] => Time:564.4110360145569
+5000 5000
+2026-04-26 21:11:37,886 [trainer.py] => Time:12.348747968673706
+2026-04-26 21:11:37,886 [trainer.py] => ACC: {'total': 93.82, '00-09': 94.8, '10-19': 92.8, '20-29': 94.1, '30-39': 92.9, '40-49': 94.5, 'old': 93.65, 'new': 94.5}
+2026-04-26 21:11:37,886 [trainer.py] => ACC top1 curve: [99.4, 97.4, 95.83, 94.88, 93.82]
+Average Accuracy: 96.26599999999999
+2026-04-26 21:11:37,886 [trainer.py] => Average Accuracy: 96.26599999999999
+2026-04-26 21:11:37,888 [trainer.py] => All params: 111194651
+2026-04-26 21:11:37,890 [trainer.py] => Trainable params: 376330
+2026-04-26 21:11:37,890 [palora.py] => Learning on 50-60
+Parameters to be updated: {'image_encoder.blocks.5.attn.lora_B_k.5.weight', 'image_encoder.blocks.7.attn.lora_A_k.5.weight', 'image_encoder.blocks.7.attn.lora_B_v.5.weight', 'image_encoder.blocks.3.attn.lora_B_k.5.weight', 'image_encoder.blocks.0.attn.lora_B_k.5.weight', 'image_encoder.blocks.5.attn.lora_A_v.5.weight', 'image_encoder.blocks.5.attn.lora_A_k.5.weight', 'image_encoder.blocks.8.attn.lora_B_k.5.weight', 'image_encoder.blocks.2.attn.lora_A_v.5.weight', 'image_encoder.blocks.4.attn.lora_B_k.5.weight', 'image_encoder.blocks.1.attn.lora_A_k.5.weight', 'image_encoder.blocks.4.attn.lora_A_v.5.weight', 'image_encoder.blocks.6.attn.lora_B_k.5.weight', 'image_encoder.blocks.9.attn.lora_B_k.5.weight', 'image_encoder.blocks.10.attn.lora_A_v.5.weight', 'image_encoder.blocks.6.attn.lora_A_v.5.weight', 'image_encoder.blocks.11.attn.lora_A_k.5.weight', 'image_encoder.blocks.1.attn.lora_B_k.5.weight', 'image_encoder.blocks.10.attn.lora_B_v.5.weight', 'image_encoder.blocks.7.attn.lora_A_v.5.weight', 'image_encoder.blocks.4.attn.lora_A_k.5.weight', 'image_encoder.blocks.0.attn.lora_B_v.5.weight', 'image_encoder.blocks.0.attn.lora_A_v.5.weight', 'image_encoder.blocks.8.attn.lora_A_k.5.weight', 'image_encoder.blocks.6.attn.lora_B_v.5.weight', 'image_encoder.blocks.5.attn.lora_B_v.5.weight', 'image_encoder.blocks.8.attn.lora_A_v.5.weight', 'image_encoder.blocks.9.attn.lora_A_v.5.weight', 'image_encoder.blocks.3.attn.lora_B_v.5.weight', 'image_encoder.blocks.11.attn.lora_B_k.5.weight', 'image_encoder.blocks.2.attn.lora_B_v.5.weight', 'image_encoder.blocks.2.attn.lora_A_k.5.weight', 'image_encoder.blocks.10.attn.lora_A_k.5.weight', 'image_encoder.blocks.6.attn.lora_A_k.5.weight', 'image_encoder.blocks.11.attn.lora_A_v.5.weight', 'image_encoder.blocks.3.attn.lora_A_v.5.weight', 'image_encoder.blocks.3.attn.lora_A_k.5.weight', 'image_encoder.blocks.2.attn.lora_B_k.5.weight', 'image_encoder.blocks.7.attn.lora_B_k.5.weight', 'image_encoder.blocks.8.attn.lora_B_v.5.weight', 'image_encoder.blocks.9.attn.lora_B_v.5.weight', 'image_encoder.blocks.11.attn.lora_B_v.5.weight', 'image_encoder.blocks.10.attn.lora_B_k.5.weight', 'image_encoder.blocks.9.attn.lora_A_k.5.weight', 'image_encoder.blocks.0.attn.lora_A_k.5.weight', 'classifier_pool.5.bias', 'image_encoder.blocks.4.attn.lora_B_v.5.weight', 'image_encoder.blocks.1.attn.lora_B_v.5.weight', 'classifier_pool.5.weight', 'image_encoder.blocks.1.attn.lora_A_v.5.weight'}
+After trained on task 4 tensor(0.0941, device='cuda:0') tensor(0.0993, device='cuda:0')
+After trained on task 4 tensor(0.1299, device='cuda:0') tensor(0.1153, device='cuda:0')
+After trained on task 4 tensor(0.1447, device='cuda:0') tensor(0.1325, device='cuda:0')
+After trained on task 4 tensor(0.1110, device='cuda:0') tensor(0.1185, device='cuda:0')
+After trained on task 4 tensor(0.1350, device='cuda:0') tensor(0.1617, device='cuda:0')
+After trained on task 4 tensor(0.1245, device='cuda:0') tensor(0.2046, device='cuda:0')
+After trained on task 4 tensor(0.1639, device='cuda:0') tensor(0.1918, device='cuda:0')
+After trained on task 4 tensor(0.1625, device='cuda:0') tensor(0.2145, device='cuda:0')
+After trained on task 4 tensor(0.1828, device='cuda:0') tensor(0.2170, device='cuda:0')
+After trained on task 4 tensor(0.2039, device='cuda:0') tensor(0.2323, device='cuda:0')
+After trained on task 4 tensor(0.1963, device='cuda:0') tensor(0.2358, device='cuda:0')
+After trained on task 4 tensor(0.4403, device='cuda:0') tensor(0.3056, device='cuda:0')
+reserving basis 39/768; cond: 15192208441344.0, ratio:0.9926297664642334
+reserving basis 39/768; cond: 15192208441344.0, ratio:0.9926297664642334
+reserving basis 46/768; cond: 701633724416.0, ratio:0.9914494156837463
+reserving basis 46/768; cond: 701633724416.0, ratio:0.9914494156837463
+reserving basis 43/768; cond: 201769566208.0, ratio:0.9905135631561279
+reserving basis 43/768; cond: 201769566208.0, ratio:0.9905135631561279
+reserving basis 43/768; cond: 144650240000.0, ratio:0.9934702515602112
+reserving basis 43/768; cond: 144650240000.0, ratio:0.9934702515602112
+reserving basis 43/768; cond: 3771203584000.0, ratio:0.9901090860366821
+reserving basis 43/768; cond: 3771203584000.0, ratio:0.9901090860366821
+reserving basis 43/768; cond: 456730673152.0, ratio:0.9903566837310791
+reserving basis 43/768; cond: 456730673152.0, ratio:0.9903566837310791
+reserving basis 45/768; cond: 1195124850688.0, ratio:0.9913422465324402
+reserving basis 45/768; cond: 1195124850688.0, ratio:0.9913422465324402
+reserving basis 44/768; cond: 4792583716864.0, ratio:0.9934636950492859
+reserving basis 44/768; cond: 4792583716864.0, ratio:0.9934636950492859
+reserving basis 46/768; cond: 345597476864.0, ratio:0.9915258884429932
+reserving basis 46/768; cond: 345597476864.0, ratio:0.9915258884429932
+reserving basis 43/768; cond: 552502165504.0, ratio:0.9904926419258118
+reserving basis 43/768; cond: 552502165504.0, ratio:0.9904926419258118
+reserving basis 46/768; cond: 6415574892544.0, ratio:0.9915765523910522
+reserving basis 46/768; cond: 6415574892544.0, ratio:0.9915765523910522
+reserving basis 42/768; cond: 17944841027584.0, ratio:0.9910119771957397
+reserving basis 42/768; cond: 17944841027584.0, ratio:0.9910119771957397
+reserving basis 45/768; cond: 149733261312.0, ratio:0.9929071068763733
+reserving basis 45/768; cond: 149733261312.0, ratio:0.9929071068763733
+reserving basis 41/768; cond: 454855622656.0, ratio:0.9900484681129456
+reserving basis 41/768; cond: 454855622656.0, ratio:0.9900484681129456
+reserving basis 46/768; cond: 103395827712.0, ratio:0.9914703369140625
+reserving basis 46/768; cond: 103395827712.0, ratio:0.9914703369140625
+reserving basis 42/768; cond: 1075134136320.0, ratio:0.990034282207489
+reserving basis 42/768; cond: 1075134136320.0, ratio:0.990034282207489
+reserving basis 45/768; cond: 191260262400.0, ratio:0.992996335029602
+reserving basis 45/768; cond: 191260262400.0, ratio:0.992996335029602
+reserving basis 43/768; cond: 250634502144.0, ratio:0.990301251411438
+reserving basis 43/768; cond: 250634502144.0, ratio:0.990301251411438
+reserving basis 44/768; cond: 988989095936.0, ratio:0.9921772480010986
+reserving basis 44/768; cond: 988989095936.0, ratio:0.9921772480010986
+reserving basis 43/768; cond: 387688955904.0, ratio:0.9908609390258789
+reserving basis 43/768; cond: 387688955904.0, ratio:0.9908609390258789
+reserving basis 44/768; cond: 380980428800.0, ratio:0.9933760166168213
+reserving basis 44/768; cond: 380980428800.0, ratio:0.9933760166168213
+reserving basis 44/768; cond: 52922474496.0, ratio:0.9926748871803284
+reserving basis 44/768; cond: 52922474496.0, ratio:0.9926748871803284
+reserving basis 38/768; cond: 494833106944.0, ratio:0.9919738173484802
+reserving basis 38/768; cond: 494833106944.0, ratio:0.9919738173484802
+reserving basis 41/768; cond: 432748298240.0, ratio:0.9925872087478638
+reserving basis 41/768; cond: 432748298240.0, ratio:0.9925872087478638
+2026-04-26 21:20:42,772 [palora.py] => Task 5, Epoch 20/20 => Loss 0.492, Train_accy 95.50
+2026-04-26 21:21:02,679 [trainer.py] => Time:564.7884962558746
+6000 6000
+2026-04-26 21:21:17,196 [trainer.py] => Time:14.51657772064209
+2026-04-26 21:21:17,196 [trainer.py] => ACC: {'total': 92.4, '00-09': 94.2, '10-19': 91.6, '20-29': 93.3, '30-39': 91.5, '40-49': 90.1, '50-59': 93.7, 'old': 92.14, 'new': 93.7}
+2026-04-26 21:21:17,196 [trainer.py] => ACC top1 curve: [99.4, 97.4, 95.83, 94.88, 93.82, 92.4]
+Average Accuracy: 95.62166666666667
+2026-04-26 21:21:17,196 [trainer.py] => Average Accuracy: 95.62166666666667
+2026-04-26 21:21:17,199 [trainer.py] => All params: 111194651
+2026-04-26 21:21:17,201 [trainer.py] => Trainable params: 376330
+2026-04-26 21:21:17,201 [palora.py] => Learning on 60-70
+Parameters to be updated: {'image_encoder.blocks.11.attn.lora_B_k.6.weight', 'image_encoder.blocks.8.attn.lora_A_v.6.weight', 'image_encoder.blocks.10.attn.lora_A_k.6.weight', 'image_encoder.blocks.0.attn.lora_A_v.6.weight', 'image_encoder.blocks.10.attn.lora_A_v.6.weight', 'image_encoder.blocks.2.attn.lora_A_k.6.weight', 'image_encoder.blocks.8.attn.lora_B_v.6.weight', 'image_encoder.blocks.5.attn.lora_A_v.6.weight', 'classifier_pool.6.bias', 'image_encoder.blocks.0.attn.lora_A_k.6.weight', 'image_encoder.blocks.11.attn.lora_A_v.6.weight', 'image_encoder.blocks.3.attn.lora_B_v.6.weight', 'image_encoder.blocks.3.attn.lora_A_k.6.weight', 'image_encoder.blocks.1.attn.lora_A_v.6.weight', 'image_encoder.blocks.8.attn.lora_A_k.6.weight', 'image_encoder.blocks.9.attn.lora_B_k.6.weight', 'image_encoder.blocks.4.attn.lora_B_v.6.weight', 'image_encoder.blocks.1.attn.lora_A_k.6.weight', 'image_encoder.blocks.11.attn.lora_A_k.6.weight', 'image_encoder.blocks.5.attn.lora_A_k.6.weight', 'image_encoder.blocks.7.attn.lora_B_v.6.weight', 'image_encoder.blocks.4.attn.lora_A_k.6.weight', 'image_encoder.blocks.1.attn.lora_B_k.6.weight', 'image_encoder.blocks.2.attn.lora_A_v.6.weight', 'image_encoder.blocks.3.attn.lora_A_v.6.weight', 'image_encoder.blocks.8.attn.lora_B_k.6.weight', 'image_encoder.blocks.2.attn.lora_B_v.6.weight', 'image_encoder.blocks.7.attn.lora_A_v.6.weight', 'image_encoder.blocks.6.attn.lora_A_k.6.weight', 'image_encoder.blocks.9.attn.lora_A_v.6.weight', 'image_encoder.blocks.2.attn.lora_B_k.6.weight', 'image_encoder.blocks.6.attn.lora_B_v.6.weight', 'image_encoder.blocks.0.attn.lora_B_k.6.weight', 'classifier_pool.6.weight', 'image_encoder.blocks.9.attn.lora_B_v.6.weight', 'image_encoder.blocks.7.attn.lora_A_k.6.weight', 'image_encoder.blocks.5.attn.lora_B_k.6.weight', 'image_encoder.blocks.9.attn.lora_A_k.6.weight', 'image_encoder.blocks.4.attn.lora_B_k.6.weight', 'image_encoder.blocks.4.attn.lora_A_v.6.weight', 'image_encoder.blocks.10.attn.lora_B_v.6.weight', 'image_encoder.blocks.11.attn.lora_B_v.6.weight', 'image_encoder.blocks.5.attn.lora_B_v.6.weight', 'image_encoder.blocks.6.attn.lora_B_k.6.weight', 'image_encoder.blocks.7.attn.lora_B_k.6.weight', 'image_encoder.blocks.10.attn.lora_B_k.6.weight', 'image_encoder.blocks.3.attn.lora_B_k.6.weight', 'image_encoder.blocks.6.attn.lora_A_v.6.weight', 'image_encoder.blocks.1.attn.lora_B_v.6.weight', 'image_encoder.blocks.0.attn.lora_B_v.6.weight'}
+After trained on task 5 tensor(0.0899, device='cuda:0') tensor(0.1049, device='cuda:0')
+After trained on task 5 tensor(0.1802, device='cuda:0') tensor(0.1207, device='cuda:0')
+After trained on task 5 tensor(0.1043, device='cuda:0') tensor(0.1437, device='cuda:0')
+After trained on task 5 tensor(0.1548, device='cuda:0') tensor(0.1111, device='cuda:0')
+After trained on task 5 tensor(0.1257, device='cuda:0') tensor(0.1812, device='cuda:0')
+After trained on task 5 tensor(0.1397, device='cuda:0') tensor(0.1815, device='cuda:0')
+After trained on task 5 tensor(0.1704, device='cuda:0') tensor(0.1959, device='cuda:0')
+After trained on task 5 tensor(0.1907, device='cuda:0') tensor(0.2004, device='cuda:0')
+After trained on task 5 tensor(0.1563, device='cuda:0') tensor(0.2043, device='cuda:0')
+After trained on task 5 tensor(0.1961, device='cuda:0') tensor(0.2022, device='cuda:0')
+After trained on task 5 tensor(0.1641, device='cuda:0') tensor(0.1828, device='cuda:0')
+After trained on task 5 tensor(0.5416, device='cuda:0') tensor(0.3491, device='cuda:0')
+reserving basis 45/768; cond: 1653696495616.0, ratio:0.991148829460144
+reserving basis 45/768; cond: 1653696495616.0, ratio:0.991148829460144
+reserving basis 53/768; cond: 35489480704.0, ratio:0.9909811615943909
+reserving basis 53/768; cond: 35489480704.0, ratio:0.9909811615943909
+reserving basis 49/768; cond: 2010821820416.0, ratio:0.9903852343559265
+reserving basis 49/768; cond: 2010821820416.0, ratio:0.9903852343559265
+reserving basis 50/768; cond: 71160135680.0, ratio:0.9929991364479065
+reserving basis 50/768; cond: 71160135680.0, ratio:0.9929991364479065
+reserving basis 50/768; cond: 88699240448.0, ratio:0.9909092783927917
+reserving basis 50/768; cond: 88699240448.0, ratio:0.9909092783927917
+reserving basis 50/768; cond: 816688398336.0, ratio:0.9925564527511597
+reserving basis 50/768; cond: 816688398336.0, ratio:0.9925564527511597
+reserving basis 52/768; cond: 245323268096.0, ratio:0.9921174049377441
+reserving basis 52/768; cond: 245323268096.0, ratio:0.9921174049377441
+reserving basis 52/768; cond: 125705691136.0, ratio:0.9938430190086365
+reserving basis 52/768; cond: 125705691136.0, ratio:0.9938430190086365
+reserving basis 54/768; cond: 661318926336.0, ratio:0.9937278032302856
+reserving basis 54/768; cond: 661318926336.0, ratio:0.9937278032302856
+reserving basis 50/768; cond: 158484283392.0, ratio:0.9928248524665833
+reserving basis 50/768; cond: 158484283392.0, ratio:0.9928248524665833
+reserving basis 53/768; cond: 1590372859904.0, ratio:0.9907855987548828
+reserving basis 53/768; cond: 1590372859904.0, ratio:0.9907855987548828
+reserving basis 49/768; cond: 1414191513600.0, ratio:0.9925233125686646
+reserving basis 49/768; cond: 1414191513600.0, ratio:0.9925233125686646
+reserving basis 52/768; cond: 73702924288.0, ratio:0.9908909201622009
+reserving basis 52/768; cond: 73702924288.0, ratio:0.9908909201622009
+reserving basis 48/768; cond: 697080872960.0, ratio:0.9916005730628967
+reserving basis 48/768; cond: 697080872960.0, ratio:0.9916005730628967
+reserving basis 53/768; cond: 95550611456.0, ratio:0.990311861038208
+reserving basis 53/768; cond: 95550611456.0, ratio:0.990311861038208
+reserving basis 49/768; cond: 130943115264.0, ratio:0.991309642791748
+reserving basis 49/768; cond: 130943115264.0, ratio:0.991309642791748
+reserving basis 53/768; cond: 1745021435904.0, ratio:0.992786705493927
+reserving basis 53/768; cond: 1745021435904.0, ratio:0.992786705493927
+reserving basis 50/768; cond: 95964954624.0, ratio:0.9910069704055786
+reserving basis 50/768; cond: 95964954624.0, ratio:0.9910069704055786
+reserving basis 51/768; cond: 35722719395840.0, ratio:0.9906256794929504
+reserving basis 51/768; cond: 35722719395840.0, ratio:0.9906256794929504
+reserving basis 50/768; cond: 885948088320.0, ratio:0.9917429089546204
+reserving basis 50/768; cond: 885948088320.0, ratio:0.9917429089546204
+reserving basis 51/768; cond: 955772698624.0, ratio:0.9906080961227417
+reserving basis 51/768; cond: 955772698624.0, ratio:0.9906080961227417
+reserving basis 51/768; cond: 20251947302912.0, ratio:0.9922641515731812
+reserving basis 51/768; cond: 20251947302912.0, ratio:0.9922641515731812
+reserving basis 40/768; cond: 93512245248.0, ratio:0.9907118082046509
+reserving basis 40/768; cond: 93512245248.0, ratio:0.9907118082046509
+reserving basis 47/768; cond: 78630133760.0, ratio:0.9917394518852234
+reserving basis 47/768; cond: 78630133760.0, ratio:0.9917394518852234
+2026-04-26 21:30:24,090 [palora.py] => Task 6, Epoch 20/20 => Loss 0.478, Train_accy 95.88
+2026-04-26 21:30:43,398 [trainer.py] => Time:566.1975336074829
+7000 7000
+2026-04-26 21:31:00,032 [trainer.py] => Time:16.632972478866577
+2026-04-26 21:31:00,032 [trainer.py] => ACC: {'total': 91.99, '00-09': 93.4, '10-19': 90.0, '20-29': 92.9, '30-39': 91.4, '40-49': 90.3, '50-59': 92.5, '60-69': 93.4, 'old': 91.75, 'new': 93.4}
+2026-04-26 21:31:00,032 [trainer.py] => ACC top1 curve: [99.4, 97.4, 95.83, 94.88, 93.82, 92.4, 91.99]
+Average Accuracy: 95.10285714285715
+2026-04-26 21:31:00,032 [trainer.py] => Average Accuracy: 95.10285714285715
+2026-04-26 21:31:00,034 [trainer.py] => All params: 111194651
+2026-04-26 21:31:00,036 [trainer.py] => Trainable params: 376330
+2026-04-26 21:31:00,036 [palora.py] => Learning on 70-80
+Parameters to be updated: {'image_encoder.blocks.2.attn.lora_A_v.7.weight', 'image_encoder.blocks.8.attn.lora_A_v.7.weight', 'image_encoder.blocks.0.attn.lora_B_k.7.weight', 'image_encoder.blocks.6.attn.lora_B_v.7.weight', 'image_encoder.blocks.3.attn.lora_B_v.7.weight', 'image_encoder.blocks.3.attn.lora_A_k.7.weight', 'image_encoder.blocks.2.attn.lora_A_k.7.weight', 'image_encoder.blocks.10.attn.lora_A_k.7.weight', 'image_encoder.blocks.5.attn.lora_B_k.7.weight', 'image_encoder.blocks.9.attn.lora_A_v.7.weight', 'classifier_pool.7.bias', 'image_encoder.blocks.11.attn.lora_B_v.7.weight', 'image_encoder.blocks.11.attn.lora_B_k.7.weight', 'image_encoder.blocks.7.attn.lora_A_k.7.weight', 'image_encoder.blocks.1.attn.lora_B_k.7.weight', 'image_encoder.blocks.4.attn.lora_A_v.7.weight', 'image_encoder.blocks.11.attn.lora_A_v.7.weight', 'image_encoder.blocks.4.attn.lora_B_k.7.weight', 'image_encoder.blocks.11.attn.lora_A_k.7.weight', 'image_encoder.blocks.9.attn.lora_A_k.7.weight', 'image_encoder.blocks.2.attn.lora_B_k.7.weight', 'image_encoder.blocks.6.attn.lora_A_v.7.weight', 'image_encoder.blocks.0.attn.lora_A_v.7.weight', 'image_encoder.blocks.7.attn.lora_B_v.7.weight', 'image_encoder.blocks.8.attn.lora_A_k.7.weight', 'image_encoder.blocks.8.attn.lora_B_v.7.weight', 'image_encoder.blocks.0.attn.lora_A_k.7.weight', 'image_encoder.blocks.2.attn.lora_B_v.7.weight', 'image_encoder.blocks.3.attn.lora_A_v.7.weight', 'image_encoder.blocks.9.attn.lora_B_v.7.weight', 'image_encoder.blocks.5.attn.lora_B_v.7.weight', 'image_encoder.blocks.1.attn.lora_B_v.7.weight', 'image_encoder.blocks.10.attn.lora_B_k.7.weight', 'image_encoder.blocks.4.attn.lora_B_v.7.weight', 'image_encoder.blocks.7.attn.lora_A_v.7.weight', 'image_encoder.blocks.10.attn.lora_A_v.7.weight', 'image_encoder.blocks.6.attn.lora_A_k.7.weight', 'image_encoder.blocks.10.attn.lora_B_v.7.weight', 'classifier_pool.7.weight', 'image_encoder.blocks.1.attn.lora_A_v.7.weight', 'image_encoder.blocks.6.attn.lora_B_k.7.weight', 'image_encoder.blocks.5.attn.lora_A_v.7.weight', 'image_encoder.blocks.1.attn.lora_A_k.7.weight', 'image_encoder.blocks.3.attn.lora_B_k.7.weight', 'image_encoder.blocks.5.attn.lora_A_k.7.weight', 'image_encoder.blocks.9.attn.lora_B_k.7.weight', 'image_encoder.blocks.7.attn.lora_B_k.7.weight', 'image_encoder.blocks.8.attn.lora_B_k.7.weight', 'image_encoder.blocks.0.attn.lora_B_v.7.weight', 'image_encoder.blocks.4.attn.lora_A_k.7.weight'}
+After trained on task 6 tensor(0.0911, device='cuda:0') tensor(0.0794, device='cuda:0')
+After trained on task 6 tensor(0.0845, device='cuda:0') tensor(0.1471, device='cuda:0')
+After trained on task 6 tensor(0.1234, device='cuda:0') tensor(0.1154, device='cuda:0')
+After trained on task 6 tensor(0.1124, device='cuda:0') tensor(0.1319, device='cuda:0')
+After trained on task 6 tensor(0.1114, device='cuda:0') tensor(0.1660, device='cuda:0')
+After trained on task 6 tensor(0.1133, device='cuda:0') tensor(0.1666, device='cuda:0')
+After trained on task 6 tensor(0.1173, device='cuda:0') tensor(0.2036, device='cuda:0')
+After trained on task 6 tensor(0.1278, device='cuda:0') tensor(0.1883, device='cuda:0')
+After trained on task 6 tensor(0.1530, device='cuda:0') tensor(0.1899, device='cuda:0')
+After trained on task 6 tensor(0.1819, device='cuda:0') tensor(0.1812, device='cuda:0')
+After trained on task 6 tensor(0.1822, device='cuda:0') tensor(0.2058, device='cuda:0')
+After trained on task 6 tensor(0.4023, device='cuda:0') tensor(0.2454, device='cuda:0')
+reserving basis 50/768; cond: 232842051584.0, ratio:0.990483283996582
+reserving basis 50/768; cond: 232842051584.0, ratio:0.990483283996582
+reserving basis 60/768; cond: 956033073152.0, ratio:0.9907804131507874
+reserving basis 60/768; cond: 956033073152.0, ratio:0.9907804131507874
+reserving basis 55/768; cond: 1311201951744.0, ratio:0.9919870495796204
+reserving basis 55/768; cond: 1311201951744.0, ratio:0.9919870495796204
+reserving basis 57/768; cond: 46539247616.0, ratio:0.9924640655517578
+reserving basis 57/768; cond: 46539247616.0, ratio:0.9924640655517578
+reserving basis 57/768; cond: 622058864640.0, ratio:0.9913948774337769
+reserving basis 57/768; cond: 622058864640.0, ratio:0.9913948774337769
+reserving basis 57/768; cond: 155341832192.0, ratio:0.9922842383384705
+reserving basis 57/768; cond: 155341832192.0, ratio:0.9922842383384705
+reserving basis 59/768; cond: 972705103872.0, ratio:0.9919544458389282
+reserving basis 59/768; cond: 972705103872.0, ratio:0.9919544458389282
+reserving basis 58/768; cond: 87867088896.0, ratio:0.9908507466316223
+reserving basis 58/768; cond: 87867088896.0, ratio:0.9908507466316223
+reserving basis 61/768; cond: 489370451968.0, ratio:0.9911028742790222
+reserving basis 61/768; cond: 489370451968.0, ratio:0.9911028742790222
+reserving basis 56/768; cond: 350703616000.0, ratio:0.9920979142189026
+reserving basis 56/768; cond: 350703616000.0, ratio:0.9920979142189026
+reserving basis 60/768; cond: 1596786606080.0, ratio:0.9911043047904968
+reserving basis 60/768; cond: 1596786606080.0, ratio:0.9911043047904968
+reserving basis 56/768; cond: 618664099840.0, ratio:0.9924852848052979
+reserving basis 56/768; cond: 618664099840.0, ratio:0.9924852848052979
+reserving basis 59/768; cond: 34427744256.0, ratio:0.9909523129463196
+reserving basis 59/768; cond: 34427744256.0, ratio:0.9909523129463196
+reserving basis 54/768; cond: 249322979328.0, ratio:0.990242063999176
+reserving basis 54/768; cond: 249322979328.0, ratio:0.990242063999176
+reserving basis 60/768; cond: 569363857408.0, ratio:0.9911375045776367
+reserving basis 60/768; cond: 569363857408.0, ratio:0.9911375045776367
+reserving basis 56/768; cond: 67468673024.0, ratio:0.9927718043327332
+reserving basis 56/768; cond: 67468673024.0, ratio:0.9927718043327332
+reserving basis 60/768; cond: 55585861632.0, ratio:0.9901115894317627
+reserving basis 60/768; cond: 55585861632.0, ratio:0.9901115894317627
+reserving basis 57/768; cond: 347599175680.0, ratio:0.9928479194641113
+reserving basis 57/768; cond: 347599175680.0, ratio:0.9928479194641113
+reserving basis 58/768; cond: 1340088123392.0, ratio:0.9928668737411499
+reserving basis 58/768; cond: 1340088123392.0, ratio:0.9928668737411499
+reserving basis 57/768; cond: 381675012096.0, ratio:0.9925253987312317
+reserving basis 57/768; cond: 381675012096.0, ratio:0.9925253987312317
+reserving basis 58/768; cond: 808112422912.0, ratio:0.9926027059555054
+reserving basis 58/768; cond: 808112422912.0, ratio:0.9926027059555054
+reserving basis 57/768; cond: 53669036032.0, ratio:0.9900914430618286
+reserving basis 57/768; cond: 53669036032.0, ratio:0.9900914430618286
+reserving basis 44/768; cond: 763608104960.0, ratio:0.9905101656913757
+reserving basis 44/768; cond: 763608104960.0, ratio:0.9905101656913757
+reserving basis 53/768; cond: 65680764928.0, ratio:0.9914909601211548
+reserving basis 53/768; cond: 65680764928.0, ratio:0.9914909601211548
+2026-04-26 21:40:06,514 [palora.py] => Task 7, Epoch 20/20 => Loss 0.480, Train_accy 95.62
+2026-04-26 21:40:26,548 [trainer.py] => Time:566.5121738910675
+8000 8000
+2026-04-26 21:40:45,344 [trainer.py] => Time:18.79517436027527
+2026-04-26 21:40:45,344 [trainer.py] => ACC: {'total': 91.55, '00-09': 93.0, '10-19': 89.7, '20-29': 92.2, '30-39': 91.0, '40-49': 89.9, '50-59': 91.1, '60-69': 91.2, '70-79': 94.3, 'old': 91.16, 'new': 94.3}
+2026-04-26 21:40:45,344 [trainer.py] => ACC top1 curve: [99.4, 97.4, 95.83, 94.88, 93.82, 92.4, 91.99, 91.55]
+Average Accuracy: 94.65875
+2026-04-26 21:40:45,344 [trainer.py] => Average Accuracy: 94.65875
+2026-04-26 21:40:45,347 [trainer.py] => All params: 111194651
+2026-04-26 21:40:45,349 [trainer.py] => Trainable params: 376330
+2026-04-26 21:40:45,349 [palora.py] => Learning on 80-90
+Parameters to be updated: {'image_encoder.blocks.11.attn.lora_A_v.8.weight', 'image_encoder.blocks.10.attn.lora_A_k.8.weight', 'image_encoder.blocks.3.attn.lora_A_k.8.weight', 'image_encoder.blocks.5.attn.lora_B_v.8.weight', 'image_encoder.blocks.7.attn.lora_A_k.8.weight', 'image_encoder.blocks.11.attn.lora_B_v.8.weight', 'classifier_pool.8.weight', 'image_encoder.blocks.1.attn.lora_B_k.8.weight', 'image_encoder.blocks.9.attn.lora_A_k.8.weight', 'image_encoder.blocks.3.attn.lora_B_v.8.weight', 'image_encoder.blocks.3.attn.lora_B_k.8.weight', 'image_encoder.blocks.9.attn.lora_B_v.8.weight', 'image_encoder.blocks.10.attn.lora_B_v.8.weight', 'image_encoder.blocks.11.attn.lora_B_k.8.weight', 'image_encoder.blocks.6.attn.lora_B_v.8.weight', 'image_encoder.blocks.7.attn.lora_A_v.8.weight', 'image_encoder.blocks.4.attn.lora_A_k.8.weight', 'image_encoder.blocks.2.attn.lora_B_v.8.weight', 'image_encoder.blocks.4.attn.lora_A_v.8.weight', 'image_encoder.blocks.8.attn.lora_B_v.8.weight', 'image_encoder.blocks.7.attn.lora_B_v.8.weight', 'image_encoder.blocks.6.attn.lora_A_v.8.weight', 'image_encoder.blocks.10.attn.lora_A_v.8.weight', 'image_encoder.blocks.6.attn.lora_A_k.8.weight', 'image_encoder.blocks.0.attn.lora_A_v.8.weight', 'image_encoder.blocks.4.attn.lora_B_k.8.weight', 'image_encoder.blocks.0.attn.lora_A_k.8.weight', 'image_encoder.blocks.8.attn.lora_B_k.8.weight', 'image_encoder.blocks.9.attn.lora_A_v.8.weight', 'image_encoder.blocks.2.attn.lora_A_k.8.weight', 'image_encoder.blocks.10.attn.lora_B_k.8.weight', 'classifier_pool.8.bias', 'image_encoder.blocks.5.attn.lora_A_v.8.weight', 'image_encoder.blocks.2.attn.lora_A_v.8.weight', 'image_encoder.blocks.1.attn.lora_A_k.8.weight', 'image_encoder.blocks.0.attn.lora_B_k.8.weight', 'image_encoder.blocks.5.attn.lora_A_k.8.weight', 'image_encoder.blocks.0.attn.lora_B_v.8.weight', 'image_encoder.blocks.6.attn.lora_B_k.8.weight', 'image_encoder.blocks.8.attn.lora_A_k.8.weight', 'image_encoder.blocks.2.attn.lora_B_k.8.weight', 'image_encoder.blocks.9.attn.lora_B_k.8.weight', 'image_encoder.blocks.11.attn.lora_A_k.8.weight', 'image_encoder.blocks.1.attn.lora_A_v.8.weight', 'image_encoder.blocks.1.attn.lora_B_v.8.weight', 'image_encoder.blocks.3.attn.lora_A_v.8.weight', 'image_encoder.blocks.5.attn.lora_B_k.8.weight', 'image_encoder.blocks.8.attn.lora_A_v.8.weight', 'image_encoder.blocks.4.attn.lora_B_v.8.weight', 'image_encoder.blocks.7.attn.lora_B_k.8.weight'}
+After trained on task 7 tensor(0.0965, device='cuda:0') tensor(0.0905, device='cuda:0')
+After trained on task 7 tensor(0.0964, device='cuda:0') tensor(0.1292, device='cuda:0')
+After trained on task 7 tensor(0.1176, device='cuda:0') tensor(0.1072, device='cuda:0')
+After trained on task 7 tensor(0.1067, device='cuda:0') tensor(0.1019, device='cuda:0')
+After trained on task 7 tensor(0.1085, device='cuda:0') tensor(0.1404, device='cuda:0')
+After trained on task 7 tensor(0.1230, device='cuda:0') tensor(0.1482, device='cuda:0')
+After trained on task 7 tensor(0.1255, device='cuda:0') tensor(0.1752, device='cuda:0')
+After trained on task 7 tensor(0.1182, device='cuda:0') tensor(0.1832, device='cuda:0')
+After trained on task 7 tensor(0.1474, device='cuda:0') tensor(0.1701, device='cuda:0')
+After trained on task 7 tensor(0.1424, device='cuda:0') tensor(0.1655, device='cuda:0')
+After trained on task 7 tensor(0.1290, device='cuda:0') tensor(0.1593, device='cuda:0')
+After trained on task 7 tensor(0.3305, device='cuda:0') tensor(0.2075, device='cuda:0')
+reserving basis 55/768; cond: 389993791488.0, ratio:0.9916520118713379
+reserving basis 55/768; cond: 389993791488.0, ratio:0.9916520118713379
+reserving basis 67/768; cond: 23532455936.0, ratio:0.9932016134262085
+reserving basis 67/768; cond: 23532455936.0, ratio:0.9932016134262085
+reserving basis 61/768; cond: 358318276608.0, ratio:0.9922348856925964
+reserving basis 61/768; cond: 358318276608.0, ratio:0.9922348856925964
+reserving basis 63/768; cond: 175931244544.0, ratio:0.99099200963974
+reserving basis 63/768; cond: 175931244544.0, ratio:0.99099200963974
+reserving basis 63/768; cond: 469655715840.0, ratio:0.9906386137008667
+reserving basis 63/768; cond: 469655715840.0, ratio:0.9906386137008667
+reserving basis 63/768; cond: 162972581888.0, ratio:0.990681529045105
+reserving basis 63/768; cond: 162972581888.0, ratio:0.990681529045105
+reserving basis 66/768; cond: 716518260736.0, ratio:0.9927578568458557
+reserving basis 66/768; cond: 716518260736.0, ratio:0.9927578568458557
+reserving basis 64/768; cond: 5599600836608.0, ratio:0.9909699559211731
+reserving basis 64/768; cond: 5599600836608.0, ratio:0.9909699559211731
+reserving basis 68/768; cond: 69384257536.0, ratio:0.9916805028915405
+reserving basis 68/768; cond: 69384257536.0, ratio:0.9916805028915405
+reserving basis 62/768; cond: 163997859840.0, ratio:0.9910485744476318
+reserving basis 62/768; cond: 163997859840.0, ratio:0.9910485744476318
+reserving basis 67/768; cond: 145987977216.0, ratio:0.9918674230575562
+reserving basis 67/768; cond: 145987977216.0, ratio:0.9918674230575562
+reserving basis 62/768; cond: 445074735104.0, ratio:0.9900243878364563
+reserving basis 62/768; cond: 445074735104.0, ratio:0.9900243878364563
+reserving basis 66/768; cond: 319646433280.0, ratio:0.9915820360183716
+reserving basis 66/768; cond: 319646433280.0, ratio:0.9915820360183716
+reserving basis 60/768; cond: 217286508544.0, ratio:0.9911315441131592
+reserving basis 60/768; cond: 217286508544.0, ratio:0.9911315441131592
+reserving basis 67/768; cond: 56625758208.0, ratio:0.9910477995872498
+reserving basis 67/768; cond: 56625758208.0, ratio:0.9910477995872498
+reserving basis 62/768; cond: 248048648192.0, ratio:0.9905360341072083
+reserving basis 62/768; cond: 248048648192.0, ratio:0.9905360341072083
+reserving basis 67/768; cond: 391698350080.0, ratio:0.992426872253418
+reserving basis 67/768; cond: 391698350080.0, ratio:0.992426872253418
+reserving basis 63/768; cond: 774272778240.0, ratio:0.9907074570655823
+reserving basis 63/768; cond: 774272778240.0, ratio:0.9907074570655823
+reserving basis 65/768; cond: 3251648069632.0, ratio:0.992743968963623
+reserving basis 65/768; cond: 3251648069632.0, ratio:0.992743968963623
+reserving basis 64/768; cond: 38033211392.0, ratio:0.9918677806854248
+reserving basis 64/768; cond: 38033211392.0, ratio:0.9918677806854248
+reserving basis 65/768; cond: 1455994437632.0, ratio:0.9919648170471191
+reserving basis 65/768; cond: 1455994437632.0, ratio:0.9919648170471191
+reserving basis 63/768; cond: 56858873856.0, ratio:0.9903048872947693
+reserving basis 63/768; cond: 56858873856.0, ratio:0.9903048872947693
+reserving basis 49/768; cond: 567712808960.0, ratio:0.9916718006134033
+reserving basis 49/768; cond: 567712808960.0, ratio:0.9916718006134033
+reserving basis 59/768; cond: 108180856832.0, ratio:0.9911159873008728
+reserving basis 59/768; cond: 108180856832.0, ratio:0.9911159873008728
+2026-04-26 21:49:56,275 [palora.py] => Task 8, Epoch 20/20 => Loss 0.453, Train_accy 96.52
+2026-04-26 21:50:16,164 [trainer.py] => Time:570.8149855136871
+9000 9000
+2026-04-26 21:50:37,356 [trainer.py] => Time:21.19083261489868
+2026-04-26 21:50:37,356 [trainer.py] => ACC: {'total': 91.64, '00-09': 92.8, '10-19': 89.6, '20-29': 91.9, '30-39': 90.8, '40-49': 88.9, '50-59': 91.1, '60-69': 91.0, '70-79': 94.0, '80-89': 94.7, 'old': 91.26, 'new': 94.7}
+2026-04-26 21:50:37,356 [trainer.py] => ACC top1 curve: [99.4, 97.4, 95.83, 94.88, 93.82, 92.4, 91.99, 91.55, 91.64]
+Average Accuracy: 94.32333333333332
+2026-04-26 21:50:37,356 [trainer.py] => Average Accuracy: 94.32333333333332
+2026-04-26 21:50:37,359 [trainer.py] => All params: 111194651
+2026-04-26 21:50:37,361 [trainer.py] => Trainable params: 376330
+2026-04-26 21:50:37,361 [palora.py] => Learning on 90-100
+Parameters to be updated: {'image_encoder.blocks.9.attn.lora_B_v.9.weight', 'image_encoder.blocks.7.attn.lora_B_v.9.weight', 'image_encoder.blocks.6.attn.lora_B_v.9.weight', 'image_encoder.blocks.8.attn.lora_A_k.9.weight', 'image_encoder.blocks.1.attn.lora_B_k.9.weight', 'image_encoder.blocks.1.attn.lora_A_k.9.weight', 'image_encoder.blocks.9.attn.lora_B_k.9.weight', 'image_encoder.blocks.8.attn.lora_B_k.9.weight', 'image_encoder.blocks.9.attn.lora_A_v.9.weight', 'image_encoder.blocks.0.attn.lora_A_k.9.weight', 'image_encoder.blocks.3.attn.lora_A_k.9.weight', 'image_encoder.blocks.5.attn.lora_B_k.9.weight', 'image_encoder.blocks.3.attn.lora_B_v.9.weight', 'image_encoder.blocks.3.attn.lora_B_k.9.weight', 'image_encoder.blocks.10.attn.lora_B_k.9.weight', 'image_encoder.blocks.9.attn.lora_A_k.9.weight', 'image_encoder.blocks.5.attn.lora_A_v.9.weight', 'image_encoder.blocks.4.attn.lora_A_k.9.weight', 'image_encoder.blocks.11.attn.lora_A_v.9.weight', 'image_encoder.blocks.0.attn.lora_B_v.9.weight', 'image_encoder.blocks.4.attn.lora_A_v.9.weight', 'image_encoder.blocks.7.attn.lora_A_k.9.weight', 'image_encoder.blocks.5.attn.lora_A_k.9.weight', 'classifier_pool.9.weight', 'image_encoder.blocks.2.attn.lora_A_k.9.weight', 'image_encoder.blocks.4.attn.lora_B_k.9.weight', 'image_encoder.blocks.11.attn.lora_A_k.9.weight', 'image_encoder.blocks.2.attn.lora_B_v.9.weight', 'image_encoder.blocks.10.attn.lora_A_k.9.weight', 'image_encoder.blocks.11.attn.lora_B_v.9.weight', 'image_encoder.blocks.11.attn.lora_B_k.9.weight', 'image_encoder.blocks.4.attn.lora_B_v.9.weight', 'image_encoder.blocks.7.attn.lora_A_v.9.weight', 'image_encoder.blocks.5.attn.lora_B_v.9.weight', 'image_encoder.blocks.7.attn.lora_B_k.9.weight', 'image_encoder.blocks.8.attn.lora_A_v.9.weight', 'image_encoder.blocks.6.attn.lora_B_k.9.weight', 'image_encoder.blocks.3.attn.lora_A_v.9.weight', 'image_encoder.blocks.6.attn.lora_A_k.9.weight', 'classifier_pool.9.bias', 'image_encoder.blocks.6.attn.lora_A_v.9.weight', 'image_encoder.blocks.10.attn.lora_A_v.9.weight', 'image_encoder.blocks.10.attn.lora_B_v.9.weight', 'image_encoder.blocks.2.attn.lora_A_v.9.weight', 'image_encoder.blocks.8.attn.lora_B_v.9.weight', 'image_encoder.blocks.1.attn.lora_B_v.9.weight', 'image_encoder.blocks.2.attn.lora_B_k.9.weight', 'image_encoder.blocks.0.attn.lora_A_v.9.weight', 'image_encoder.blocks.1.attn.lora_A_v.9.weight', 'image_encoder.blocks.0.attn.lora_B_k.9.weight'}
+After trained on task 8 tensor(0.0889, device='cuda:0') tensor(0.0662, device='cuda:0')
+After trained on task 8 tensor(0.0847, device='cuda:0') tensor(0.0869, device='cuda:0')
+After trained on task 8 tensor(0.0928, device='cuda:0') tensor(0.1141, device='cuda:0')
+After trained on task 8 tensor(0.0813, device='cuda:0') tensor(0.1489, device='cuda:0')
+After trained on task 8 tensor(0.0888, device='cuda:0') tensor(0.1470, device='cuda:0')
+After trained on task 8 tensor(0.1076, device='cuda:0') tensor(0.1612, device='cuda:0')
+After trained on task 8 tensor(0.1071, device='cuda:0') tensor(0.1871, device='cuda:0')
+After trained on task 8 tensor(0.1088, device='cuda:0') tensor(0.1645, device='cuda:0')
+After trained on task 8 tensor(0.1546, device='cuda:0') tensor(0.1543, device='cuda:0')
+After trained on task 8 tensor(0.1235, device='cuda:0') tensor(0.1569, device='cuda:0')
+After trained on task 8 tensor(0.1407, device='cuda:0') tensor(0.1742, device='cuda:0')
+After trained on task 8 tensor(0.5123, device='cuda:0') tensor(0.3014, device='cuda:0')
+reserving basis 59/768; cond: 2965831155712.0, ratio:0.9912456274032593
+reserving basis 59/768; cond: 2965831155712.0, ratio:0.9912456274032593
+reserving basis 73/768; cond: 23497191424.0, ratio:0.9910293817520142
+reserving basis 73/768; cond: 23497191424.0, ratio:0.9910293817520142
+reserving basis 67/768; cond: 286307155968.0, ratio:0.992266058921814
+reserving basis 67/768; cond: 286307155968.0, ratio:0.992266058921814
+reserving basis 69/768; cond: 75721433088.0, ratio:0.9913833737373352
+reserving basis 69/768; cond: 75721433088.0, ratio:0.9913833737373352
+reserving basis 69/768; cond: 317987749888.0, ratio:0.9907283186912537
+reserving basis 69/768; cond: 317987749888.0, ratio:0.9907283186912537
+reserving basis 68/768; cond: 114099675136.0, ratio:0.9905126690864563
+reserving basis 68/768; cond: 114099675136.0, ratio:0.9905126690864563
+reserving basis 72/768; cond: 59678785536.0, ratio:0.9924364686012268
+reserving basis 72/768; cond: 59678785536.0, ratio:0.9924364686012268
+reserving basis 69/768; cond: 11737407422464.0, ratio:0.9916819930076599
+reserving basis 69/768; cond: 11737407422464.0, ratio:0.9916819930076599
+reserving basis 74/768; cond: 42957381632.0, ratio:0.9904828071594238
+reserving basis 74/768; cond: 42957381632.0, ratio:0.9904828071594238
+reserving basis 67/768; cond: 1424400711680.0, ratio:0.9903262257575989
+reserving basis 67/768; cond: 1424400711680.0, ratio:0.9903262257575989
+reserving basis 73/768; cond: 161795719168.0, ratio:0.9903564453125
+reserving basis 73/768; cond: 161795719168.0, ratio:0.9903564453125
+reserving basis 68/768; cond: 228343676928.0, ratio:0.9924653172492981
+reserving basis 68/768; cond: 228343676928.0, ratio:0.9924653172492981
+reserving basis 72/768; cond: 359646527488.0, ratio:0.9910494685173035
+reserving basis 72/768; cond: 359646527488.0, ratio:0.9910494685173035
+reserving basis 65/768; cond: 74898776064.0, ratio:0.9903668761253357
+reserving basis 65/768; cond: 74898776064.0, ratio:0.9903668761253357
+reserving basis 74/768; cond: 26740105216.0, ratio:0.9927774667739868
+reserving basis 74/768; cond: 26740105216.0, ratio:0.9927774667739868
+reserving basis 68/768; cond: 948188217344.0, ratio:0.9915528893470764
+reserving basis 68/768; cond: 948188217344.0, ratio:0.9915528893470764
+reserving basis 72/768; cond: 231333953536.0, ratio:0.9902064204216003
+reserving basis 72/768; cond: 231333953536.0, ratio:0.9902064204216003
+reserving basis 69/768; cond: 116122214400.0, ratio:0.990598738193512
+reserving basis 69/768; cond: 116122214400.0, ratio:0.990598738193512
+reserving basis 71/768; cond: 91868110848.0, ratio:0.9906401038169861
+reserving basis 71/768; cond: 91868110848.0, ratio:0.9906401038169861
+reserving basis 70/768; cond: 13887892480.0, ratio:0.9910271763801575
+reserving basis 70/768; cond: 13887892480.0, ratio:0.9910271763801575
+reserving basis 71/768; cond: 698808598528.0, ratio:0.9906689524650574
+reserving basis 71/768; cond: 698808598528.0, ratio:0.9906689524650574
+reserving basis 69/768; cond: 341437546496.0, ratio:0.9908591508865356
+reserving basis 69/768; cond: 341437546496.0, ratio:0.9908591508865356
+reserving basis 52/768; cond: 844770639872.0, ratio:0.9913440942764282
+reserving basis 52/768; cond: 844770639872.0, ratio:0.9913440942764282
+reserving basis 64/768; cond: 307780747264.0, ratio:0.9907556772232056
+reserving basis 64/768; cond: 307780747264.0, ratio:0.9907556772232056
+2026-04-26 21:59:53,008 [palora.py] => Task 9, Epoch 20/20 => Loss 0.423, Train_accy 97.44
+2026-04-26 22:00:12,572 [trainer.py] => Time:575.2116410732269
+10000 10000
+2026-04-26 22:00:35,168 [trainer.py] => Time:22.594802141189575
+2026-04-26 22:00:35,168 [trainer.py] => ACC: {'total': 90.98, '00-09': 92.5, '10-19': 88.2, '20-29': 91.9, '30-39': 89.1, '40-49': 88.0, '50-59': 90.2, '60-69': 91.3, '70-79': 92.7, '80-89': 93.7, '90-99': 92.2, 'old': 90.84, 'new': 92.2}
+2026-04-26 22:00:35,168 [trainer.py] => ACC top1 curve: [99.4, 97.4, 95.83, 94.88, 93.82, 92.4, 91.99, 91.55, 91.64, 90.98]
+Average Accuracy: 93.989
+2026-04-26 22:00:35,168 [trainer.py] => Average Accuracy: 93.989
