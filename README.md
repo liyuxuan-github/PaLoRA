@@ -8,50 +8,48 @@ Yuxuan Li, Fanhu Zeng, Hao Tang
 
 ## Overview
 
-PaLoRA is a parameter-efficient continual learning method that adaptively controls the magnitude of low-rank updates based on the effective rank of accumulated knowledge. By combining adaptive SVD truncation, null-space gradient projection, and rank-aware pacing, PaLoRA achieves a better stability–plasticity trade-off, particularly in long-horizon continual learning.
+How should the magnitude of LoRA updates be controlled as knowledge accumulates in continual learning?
+
+Existing LoRA-based continual learning methods commonly rely on a **fixed small learning rate** to mitigate catastrophic forgetting. However, the amount of previously learned knowledge continuously grows over time, suggesting that a fixed restriction may be insufficient for long task sequences.
+
+**PaLoRA** provides a rank-aware solution. We use the effective rank of accumulated updates to measure the growth of learned knowledge and progressively restrict new updates accordingly.
+
+PaLoRA combines three key components:
+
+- **Adaptive SVD compression** to estimate and compact the effective subspace of accumulated knowledge;
+- **Null-space gradient projection** to reduce interference with previously learned directions;
+- **Rank-aware pacing** to adaptively control the magnitude of new LoRA updates as the effective rank grows.
+
+Our theoretical analysis motivates a rank-dependent pacing rule, while experiments on **CIFAR-100, ImageNet-R, and ImageNet-A** demonstrate consistent improvements, especially in challenging long-horizon settings with up to **50 sequential tasks**.
+
+> **Key idea:** the strength of update restriction should increase as learned knowledge accumulates, rather than remaining fixed throughout continual learning.
 
 <p align="center">   <img src="fig/PaLoRA_Framework.png" alt="PaLoRA Framework"> </p>
 
 ## Requirements
 
-The code is implemented in PyTorch. Our experiments were conducted with the following environment:
+The implementation is based on **PyTorch**.
 
-- Python 3.11.4
-- PyTorch 2.0.1
-- torchvision 0.15.2
-- timm 0.6.7
+Our experiments were conducted with:
 
-The code has been tested on Linux with an NVIDIA RTX 4080 SUPER GPU.
-
-If you encounter errors such as:
-
-```
-RuntimeError: No HIP GPUs are available
+```text
+Python      3.11.4
+PyTorch     2.0.1
+torchvision 0.15.2
+timm        0.6.7
 ```
 
-or
+The code was tested on Linux with an **NVIDIA GeForce RTX 4080 SUPER** GPU.
 
-```
-ImportError: libtinfo.so.5: cannot open shared object file: No such file or directory
-```
+We recommend creating a dedicated environment before installing the dependencies.
 
-you may need to install a PyTorch version compatible with your CUDA environment.
+For example:
 
-For example, if your system only supports CUDA 11.1, you may install the corresponding PyTorch packages with:
+```bash
+conda create -n palora python=3.11.4
+conda activate palora
 
-```
-pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
-```
-
-If you encounter the following error:
-
-```
-TypeError: 'PretrainedCfg' object is not subscriptable
-```
-
-please install a compatible version of `timm`, such as:
-
-```
+pip install torch==2.0.1 torchvision==0.15.2
 pip install timm==0.6.7
 ```
 
