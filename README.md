@@ -6,6 +6,10 @@ This repository contains the official implementation of our NeurIPS 2026 paper:
 Yuxuan Li, Fanhu Zeng, Hao Tang
 **NeurIPS 2026** | [Paper](https://arxiv.org/abs/2610.04226)
 
+## Overview
+
+PaLoRA is a parameter-efficient continual learning method that adaptively controls the magnitude of low-rank updates based on the effective rank of accumulated knowledge. By combining adaptive SVD truncation, null-space gradient projection, and rank-aware pacing, PaLoRA achieves a better stability–plasticity trade-off, particularly in long-horizon continual learning.
+
 <p align="center">   <img src="fig/PaLoRA_Framework.png" alt="PaLoRA Framework"> </p>
 
 ## Requirements
